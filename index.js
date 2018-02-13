@@ -22,9 +22,7 @@ exports.handler = function(event, context) {
                     console.log('problem with request: ' + e.message);
                     context.fail(e.message);
                 });
-
-                req.write(JSON.stringify({text: JSON.stringify(rec.Sns.Message, null, '  ').replace(/<br\s*\/?>/mg,"\n")})); // for testing: , channel: '@vadim'
-
+                req.write(JSON.stringify({text: JSON.stringify(rec.Sns.Message, null, '  ').replace(/<br\s*\/?>/mg,"\n")}));
                 req.end();
             } else {
                 context.fail('Slack url not found! TopicARN' + rec.Sns.TopicArn);
