@@ -1,4 +1,12 @@
 {
-  "topic1-arn":"slack-hook1",
-  "topic2-arn":"slack-hook2"
+  "topic1-arn":
+  {
+    "slackHookUrl":"slack-hook1",
+    "messageType":"json"
+  },
+  "topic2-arn":
+  {
+    "slackHookUrl":"slack-hook2",
+    "messageType":"txt"
+  }
 }
